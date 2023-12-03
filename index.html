@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Streak</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+    <style>
+        body{
+            margin: 0 0 0 0;;
+            font-size: 9rem;
+            font-family: "Rubik Dirt";
+            color:whitesmoke;
+            background-color: rgb(15, 15, 15);
+            
+        }
+
+        .container{
+            background-image: url("https://cdn.pixabay.com/photo/2015/12/01/15/43/black-1072366_1280.jpg");
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            margin: 0px;
+        }
+
+        .box{
+            text-align: center;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+
+<script>
+    var start= new Date('12/2/2023');
+    var today= (new Date());
+    var streak=Math.round((today-start)/(1000*60*60*24));
+    document.querySelector(".box").textContent=streak+" Days";
+</script>
+
+</html>
